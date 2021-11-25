@@ -1,0 +1,25 @@
+.box {
+  margin-top: 5%;
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+ display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+@media screen and (max-width:998px) {
+  .content {
+    grid-template-columns: auto auto;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .content {
+    grid-template-columns: auto;
+  }
+}

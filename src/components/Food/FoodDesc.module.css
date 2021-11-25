@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Lora:wght@500&family=Yuji+Syuku&display=swap");
+
+.box {
+  width: 50%;
+  padding: 1% 2% 2% 1%;
+  margin: 3% auto 5%;
+}
+.center {
+  text-align: center;
+}
+.button {
+  background-color: Crimson;
+  border-radius: 5px;
+  color: white;
+  padding: 0.5em;
+  text-align: center;
+  font-size: 1rem;
+  text-decoration: none;
+  margin: 3%;
+}
+
+.button:focus,
+.button:hover {
+  background-color: FireBrick;
+  color: White;
+}
+
+.desc {
+  font-size: 1.2rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}

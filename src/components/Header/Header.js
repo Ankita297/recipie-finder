@@ -1,10 +1,14 @@
 import React from "react";
+import Category from "../Category/Category";
 import styles from "./Header.module.css";
+
 const Header = () => {
   return (
-    <div>
-      <h1 className={styles.heading}>RECIPE FINDER 🥘</h1>
-    </div>
+    <main className={styles.main}>
+      <header className={styles.header}>
+        <h1>RECIPIE FINDER</h1>
+      </header>
+    </main>
   );
 };
 

@@ -1,0 +1,40 @@
+.preloader_div {
+    display: grid;
+    place-content: center;
+    align-items: center;
+  }
+
+  .center_div {
+    width: 10rem;
+    margin-top: 5rem;
+
+    height: 10rem;
+    position: relative;
+  }
+
+
+  .rot__3 {
+    width: 10rem;
+    height: 10rem;
+    animation: rot_2 2s linear infinite;
+    border-right: 6px solid #5b8fb9;
+    position: absolute;
+    border-radius: 50%;
+  }
+
+  .heading_2 {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+  }
+  @keyframes rot_2 {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

@@ -1,7 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lora:wght@500&family=Yuji+Syuku&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display+SC");
 
-.heading{
-    text-align: center;
-    font-family: 'Lora', serif;
-
+.header {
+  background: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.header h1 {
+  font: normal 4em "Playfair Display SC", serif;
+  text-align: center;
 }
