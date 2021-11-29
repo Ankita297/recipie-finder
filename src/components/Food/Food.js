@@ -7,6 +7,7 @@ import styles from "./Food.module.css";
 import { Fragment } from "react";
 import useHttp from "../../hooks/useHttp";
 import Category from "../Category/Category";
+import Pagination from "../Paginate/Paginate"
 const Food = () => {
   const [isInput, setIsInput] = useState("");
   const [recipies, setRecipie] = useState([]);
@@ -66,25 +67,12 @@ const Food = () => {
     setIsInput(event.target.value);
   };
 
-  let content = <Error />;
-  if (recipies == null) {
-    content = <Error />;
-  } else if (recipies.length > 0) {
-    content = (
-      <div className={styles.box}>
-        <div className={styles.content}>
-          {recipies.map((x) => {
-            return <FoodItem key={x.idMeal} food={x} />;
-          })}
-        </div>
-      </div>
-    );
-  }
-
-  if (isLoading) {
+  let content = "";
+   if (isLoading) {
     content = <Loading />;
   }
 
+  else if(error) content=<Error/>
   return (
     <Fragment>
       <Input
@@ -93,9 +81,24 @@ const Food = () => {
         placeholder="Enter the ingredient or Recipie name"
         ref={InputRef}
       />
-      <Category onChoose={categoryHandler} />
-
+      
+      <Category  onChoose={categoryHandler} />
       {content}
+
+      {!isLoading && recipies.length > 0 ? (
+        <>
+          <Pagination
+            data={recipies}
+            RenderComponent={FoodItem}
+            title="Posts"
+            pageLimit={3}
+            dataLimit={3}
+          />
+        </>
+      ) : (
+       <h1>No Posts to display</h1>
+      )}
+
     </Fragment>
   );
 };

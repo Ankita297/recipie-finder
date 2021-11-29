@@ -38,7 +38,7 @@ const Category = (props) => {
           &nbsp; &nbsp;
           <select onChange={dropdownChangeHandler}>
             {category.map((x) => {
-              return <option value={x.strCategory}>{x.strCategory}</option>;
+              return <option key={x.strCategory} value={x.strCategory}>{x.strCategory}</option>;
             })}
           </select>
         </div>
