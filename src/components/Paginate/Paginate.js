@@ -1,6 +1,4 @@
-
 import React ,{useState } from "react"
-import FoodItem from "../Food/Food";
 import "./Paginate.css"
 function Pagination({ data, RenderComponent,  pageLimit, dataLimit }) {
     const [pages] = useState(Math.round(data.length / dataLimit));
@@ -44,14 +42,7 @@ function Pagination({ data, RenderComponent,  pageLimit, dataLimit }) {
     ))}
     </div></div>
   </div>
-
-  {/* show the pagiantion
-      it consists of next and previous buttons
-      along with page numbers, in our case, 5 page
-      numbers at a time
-  */}
   <div className="pagination">
-    {/* previous button */}
     <button
       onClick={goToPreviousPage}
       className={`prev ${currentPage === 1 ? 'disabled' : ''}`}
@@ -59,7 +50,6 @@ function Pagination({ data, RenderComponent,  pageLimit, dataLimit }) {
       prev
     </button>
 
-    {/* show page numbers */}
     {getPaginationGroup().map((item, index) => (
       <button
         key={index}

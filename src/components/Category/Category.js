@@ -5,7 +5,7 @@ import useHttp from "../../hooks/useHttp";
 const Category = (props) => {
   const [category, setCategory] = useState();
 
-  const { isLoading, error, sendRequest: loadData } = useHttp();
+  const { sendRequest: loadData } = useHttp();
 
   useEffect(() => {
     const categoryList = (data) => {
@@ -38,7 +38,11 @@ const Category = (props) => {
           &nbsp; &nbsp;
           <select onChange={dropdownChangeHandler}>
             {category.map((x) => {
-              return <option key={x.strCategory} value={x.strCategory}>{x.strCategory}</option>;
+              return (
+                <option key={x.strCategory} value={x.strCategory}>
+                  {x.strCategory}
+                </option>
+              );
             })}
           </select>
         </div>
