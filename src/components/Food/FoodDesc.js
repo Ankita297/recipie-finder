@@ -1,6 +1,10 @@
 import React from "react";
 import styles from "./FoodDesc.module.css";
 export const FoodDesc = (props) => {
+
+
+  const add = `${styles.custom} ${styles.btn}`
+
   return (
     <div className={styles.center}>
       <div className={styles.box}>

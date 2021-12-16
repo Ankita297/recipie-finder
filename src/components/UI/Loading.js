@@ -5,8 +5,9 @@ const Loading = () => {
     <div>
       <div className={styles.preloader_div}>
         <div className={styles.center_div}>
-          <div className={styles.rot__3}></div>
-          <h1 className={styles.heading_2}>Loading</h1>
+          <div className={styles.box}>
+            <div className={styles.three}></div>
+          </div>
           <br />
         </div>
       </div>

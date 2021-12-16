@@ -7,7 +7,6 @@ const FoodItem = (props) => {
       <div className={styles.box}>
         <div className="card">
           <a target="_h" href={props.food.strSource}>
-            <p>{props.food.idMeal}</p>
             <img
               className={styles.img}
               src={props.food.strMealThumb}
@@ -18,6 +17,8 @@ const FoodItem = (props) => {
         <FoodDesc desc={props.food} />
         <div className={styles.desc}></div>
       </div>
+  
+
     </Fragment>
   );
 };
