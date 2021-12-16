@@ -6,15 +6,10 @@ export const FoodDesc = (props) => {
       <div className={styles.box}>
         <p className={styles.desc}>{props.desc.strMeal}</p>
 
-        <a
-          href={props.desc.strSource}
-          className={styles.button}
-          type="button"
-          className={styles.button}
-        >
+        <a href={props.desc.strSource} className={styles.button} type="button">
           Blog
         </a>
-        <a href={props.desc.strYoutube} type="button" className={styles.button}>
+        <a href={props.desc.strYoutube} target='_b' type="button" className={styles.button}>
           Video
         </a>
       </div>

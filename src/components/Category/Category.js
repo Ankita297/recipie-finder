@@ -18,7 +18,7 @@ const Category = (props) => {
       },
       categoryList
     );
-  }, []);
+  }, [loadData]);
 
   const categoryHandler = (val) => {
     props.onChoose(val);

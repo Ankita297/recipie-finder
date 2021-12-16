@@ -1,10 +1,9 @@
-import React, { useCallback, useState } from "react";
-
+import { useCallback, useState } from "react";
+import Logo from "../wave.svg"
 const useHttp = () => {
   const [error, setError] = useState(null);
 
   const sendRequest = useCallback(async (reqConfig, applyData) => {
-  
     setError(null);
 
     try {
@@ -18,7 +17,7 @@ const useHttp = () => {
       }
 
       const data = await response.json();
-     await applyData(data);
+      await applyData(data);
     } catch (err) {
       setError(err.message || "Something went wrong!");
     }

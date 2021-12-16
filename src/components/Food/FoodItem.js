@@ -6,7 +6,7 @@ const FoodItem = (props) => {
     <Fragment>
       <div className={styles.box}>
         <div className="card">
-          <a target="_blank" href={props.food.strSource}>
+          <a target="_h" href={props.food.strSource}>
             <p>{props.food.idMeal}</p>
             <img
               className={styles.img}

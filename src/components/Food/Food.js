@@ -1,61 +1,54 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, Fragment } from "react";
 import Input from "../UI/Input";
 import FoodItem from "./FoodItem";
 import Loading from "../UI/Loading";
 import Error from "../UI/Error";
-import { Fragment } from "react";
 import useHttp from "../../hooks/useHttp";
 import Category from "../Category/Category";
 import Pagination from "../Paginate/Paginate";
+let dataRecipie = [];
+
 const Food = () => {
   const [isInput, setIsInput] = useState("");
   const [recipies, setRecipie] = useState([]);
   const [category, setCategory] = useState();
-  const [isLoading,setIsLoading] =useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const InputRef = useRef("");
 
   const { error, sendRequest: loadData } = useHttp();
 
-
-
   useEffect(() => {
-   setIsLoading(true);
+    setIsLoading(true);
     const recipiesGet = (data) => {
       setRecipie(data.meals);
-      console.log(data.meals);
+      setIsLoading(false);
     };
 
     const timer = setTimeout(() => {
       loadData(
         {
-          url: `https://www.themealdb.com/api/json/v1/1/search.php?s=${
-            isInput || "egg"
-          } `,
+          url: `https://www.themealdb.com/api/json/v1/1/search.php?s=${isInput} `,
         },
         recipiesGet
       );
       InputRef.current.value = "";
     }, 1500);
-    setIsLoading(false);
 
     return () => {
       clearTimeout(timer);
     };
   }, [isInput, loadData]);
 
-  let dataRecipie = [];
-
   useEffect(() => {
-      setIsLoading(true)
+    setIsLoading(true);
     const categoryGet = (data) => {
       const getData = (data) => {
-        console.log(data.meals);
         dataRecipie.push(data.meals[0]);
       };
 
       data.meals.map((x) => {
-        loadData(
+        return loadData(
           {
             url: `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${x.idMeal}`,
           },
@@ -63,22 +56,24 @@ const Food = () => {
         );
       });
 
-      setRecipie(dataRecipie);
-      setIsLoading(false)
+      setTimeout(() => {
+        setRecipie(dataRecipie);
+        setIsLoading(false);
+      }, 2000);
     };
 
     loadData(
       {
         url: `https://www.themealdb.com/api/json/v1/1/filter.php?c=${
-          category || "Goat"
+          category || "Beef"
         }`,
       },
       categoryGet
     );
-  }, [category]);
+  }, [category, loadData]);
 
   const categoryHandler = (val) => {
-    console.log(val);
+    dataRecipie = [];
     setCategory(val);
   };
 
@@ -86,16 +81,15 @@ const Food = () => {
     setIsInput(event.target.value);
   };
 
-  let content = "";
+  let content = <Loading />;
   if (isLoading && !error) {
     content = (
       <div>
-        {" "}
-        ghdg g<Loading />{" "}
+        <Loading />
       </div>
     );
   } else if (error) content = <Error />;
-  else if (recipies == null) {
+  else if (!isLoading && recipies == null) {
     content = <Error />;
   }
   return (
@@ -111,9 +105,6 @@ const Food = () => {
 
       {!isLoading && error == null && recipies != null ? (
         <>
-          {recipies.map((x) => (
-            <p> {console.log(x)}</p>
-          ))}
           <Pagination
             data={recipies}
             RenderComponent={FoodItem}
@@ -123,7 +114,7 @@ const Food = () => {
           />
         </>
       ) : (
-        <h1>No Posts to display</h1>
+        content
       )}
     </Fragment>
   );
