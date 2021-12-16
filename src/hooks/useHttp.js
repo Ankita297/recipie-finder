@@ -1,5 +1,4 @@
 import { useCallback, useState } from "react";
-import Logo from "../wave.svg"
 const useHttp = () => {
   const [error, setError] = useState(null);
 

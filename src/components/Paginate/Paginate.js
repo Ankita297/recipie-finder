@@ -40,6 +40,7 @@ function Pagination({ data, RenderComponent, pageLimit, dataLimit }) {
       <div className="dataContainer">
         <div className="box">
           <div className="content">
+            
             {getPaginatedData().map((d, idx) => (
               <RenderComponent key={idx} food={d} />
             ))}

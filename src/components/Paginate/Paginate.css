@@ -55,9 +55,10 @@
     align-items: center;
   }
   .content {
-   display: grid;
-    grid-template-columns: auto auto auto ;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+  
   }
   
   @media screen and (max-width:998px) {

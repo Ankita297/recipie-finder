@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "./Header.module.css";
-import ReactLogo from "../../wave (2).svg"
+
+import logo from "../../logo.svg"
 const Header = () => {
   return (
     <main className={styles.main}>
       <header className={styles.header}>
-        <h1>RECIPIE FINDER</h1>
-        <img  style={{marginTop:'-10%'}} src={ReactLogo} alt="React Logo" />
+        <h1> <img src={logo} alt="logo"/> RECIPIE FINDER</h1>
       </header>
     </main>
   );
