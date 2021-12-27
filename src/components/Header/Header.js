@@ -1,15 +1,19 @@
 import React from "react";
 import styles from "./Header.module.css";
+import { Link } from "react-router-dom";
 
 import logo from "../../logo.svg"
 const Header = () => {
   return (
-    <main className={styles.main}>
       <header className={styles.header}>
-        <h1> <img src={logo} alt="logo"/> RECIPIE FINDER</h1>
+        <Link to="/" > <img src={logo} alt="logo"/> RECIPIE FINDER</Link>
+        <Link to= "/fav" className={styles.fav}> Fav paage</Link>
+        
       </header>
+
+
+
       
-    </main>
   );
 };
 

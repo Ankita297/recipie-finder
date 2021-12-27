@@ -1,0 +1,6 @@
+1. you can't directly put objects in local storage so struggles around
+thanks to someone's blog 
+
+2.  find filter saved me 
+
+3 . only  one fn is needed to add and remove 

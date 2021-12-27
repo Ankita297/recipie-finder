@@ -1,10 +1,36 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display+SC");
 
 .header {
-  background: rgba(0, 0, 0, 0.1);
+  background: white;
+  color: rgb(13, 26, 38);
+  width: 100vw;
+  margin-bottom: 60px;
+
+
+  top: 0;
+  height: 60px;
+  line-height: 60px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
 }
 .header h1 {
   font: normal 2.25em "Playfair Display SC", serif;
   text-align: center;
+}
+
+.fav
+{
+  float: right;
+  margin-right: 2rem;
+}
+
+.navbar {
+  background: white;
+  color: rgb(13, 26, 38);
+  position: fixed;
+  top: 0;
+  height: 60px;
+  line-height: 60px;
+  width: 100vw;
+  z-index: 10;
 }
