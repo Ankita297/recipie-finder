@@ -8,13 +8,18 @@ import Category from "../Category/Category";
 import Pagination from "../Paginate/Paginate";
 let dataRecipie = [];
 
-const Food = () => {
+const Food = (props) => {
   const [isInput, setIsInput] = useState("");
   const [recipies, setRecipie] = useState([]);
   const [category, setCategory] = useState();
   const [isLoading, setIsLoading] = useState(false);
 
   const InputRef = useRef("");
+
+   const getFoodId=(data)=>{
+     console.log(data);
+     props.getId(data);
+   }
 
   const { error, sendRequest: loadData } = useHttp();
 

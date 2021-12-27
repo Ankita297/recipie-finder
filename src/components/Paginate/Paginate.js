@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./Paginate.css";
-function Pagination({ data, RenderComponent, pageLimit, dataLimit }) {
+function Pagination({ data, getId, RenderComponent, pageLimit, dataLimit }) {
   const max_page = data.length / dataLimit;
   const [pages] = useState(Math.round(data.length / dataLimit));
+
 
   const [currentPage, setCurrentPage] = useState(1);
 

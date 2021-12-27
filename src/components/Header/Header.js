@@ -8,6 +8,7 @@ const Header = () => {
       <header className={styles.header}>
         <h1> <img src={logo} alt="logo"/> RECIPIE FINDER</h1>
       </header>
+      
     </main>
   );
 };
