@@ -1,22 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Lora:wght@500&family=Yuji+Syuku&display=swap");
+.center {
+  text-align: center;
+  color: #66fcf1;
+}
 
 .box {
   width: 50%;
-  padding: 1% 2% 2% 1%;
+  color: #66fcf1;
+
   margin: 3% auto 5%;
 }
-.center {
-  text-align: center;
-}
 .button {
-  background-color: Crimson;
+  background-color: #66fcf1;
   border-radius: 5px;
-  color: white;
-  padding: 0.5em;
+  border: 3px solid #1f2831;
+  color: #1f2831;
+
   text-align: center;
   font-size: 1rem;
+  font-weight: 525;
   text-decoration: none;
   margin: 3%;
+  padding: 4%;
 }
 
 .button:focus,
@@ -25,7 +30,13 @@
   color: White;
 }
 
+.btn {
+  font-size: 1.5rem;
+  margin-top: 15px;
+  background-color: white;
+  border-radius: 5px;
+}
+
 .desc {
   font-size: 1.2rem;
-  font-family: Georgia, "Times New Roman", Times, serif;
 }

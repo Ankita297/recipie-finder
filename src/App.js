@@ -1,13 +1,24 @@
 import React from "react";
 import { Fragment } from "react";
-import Food from "./components/Food/Food";
-import Header from "./components/Header/Header";
+import FavPage from "./pages/FavPage";
+import Homepage from "./pages/Homepage";
+import { Switch, Route, Redirect } from "react-router-dom";
 const App = () => {
   return (
-    <Fragment>
-      <Header />
-      <Food />
-    </Fragment>
+    <Switch>
+      <Fragment>
+        <Route path="/" exact>
+          <Homepage />
+        </Route>
+
+        <Route path="/fav" exact>
+          <FavPage />
+        </Route>
+        <Route path='*'>
+          <Redirect to="/"></Redirect>
+        </Route>
+      </Fragment>
+    </Switch>
   );
 };
 

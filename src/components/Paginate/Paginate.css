@@ -3,7 +3,9 @@
     align-items: center;
     justify-content: center;
   }
-  
+  .dataContainer{
+    padding: 0% 15% 0%;
+  }
   .paginationItem {
     background: #fff;
     border: 2px solid #666;
@@ -12,7 +14,7 @@
     height: 45px;
     width: 45px;
     position: relative;
-    margin: 0 5px;
+    margin: 5px 5px;
     cursor: pointer;
   }
   
@@ -53,24 +55,28 @@
     display: grid;
     justify-content: center;
     align-items: center;
+    background-color: #1f2833;
+    border-radius: 5px;
+    margin-bottom: 1rem;
   }
   .content {
     display: grid;
-    grid-template-columns: auto auto auto;
-    padding: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px;
   
   }
   
   @media screen and (max-width:998px) {
     .content {
-      grid-template-columns: auto auto;
+      grid-template-columns: 1fr 1fr;
+      padding: 12px;
     }
   }
   
   
   @media screen and (max-width: 768px) {
     .content {
-      grid-template-columns: auto;
+      grid-template-columns: 1fr;
     }
   }
   

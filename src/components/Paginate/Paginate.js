@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Paginate.css";
-function Pagination({ data, RenderComponent, pageLimit, dataLimit }) {
+function Pagination({ data, getId, RenderComponent, pageLimit, dataLimit }) {
   const max_page = data.length / dataLimit;
   const [pages] = useState(Math.round(data.length / dataLimit));
 
@@ -40,7 +40,6 @@ function Pagination({ data, RenderComponent, pageLimit, dataLimit }) {
       <div className="dataContainer">
         <div className="box">
           <div className="content">
-            
             {getPaginatedData().map((d, idx) => (
               <RenderComponent key={idx} food={d} />
             ))}

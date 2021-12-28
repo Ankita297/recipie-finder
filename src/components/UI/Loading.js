@@ -6,7 +6,13 @@ const Loading = () => {
       <div className={styles.preloader_div}>
         <div className={styles.center_div}>
           <div className={styles.box}>
-            <div className={styles.three}></div>
+          <div className={styles.three}>
+          <div className={styles.two}>
+</div>
+          </div>
+ 
+          
+
           </div>
           <br />
         </div>

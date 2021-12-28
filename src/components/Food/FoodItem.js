@@ -2,6 +2,10 @@ import React, { Fragment } from "react";
 import { FoodDesc } from "./FoodDesc";
 import styles from "./FoodItem.module.css";
 const FoodItem = (props) => {
+  const getIdFood = (data) => {
+    console.log(data);
+  };
+
   return (
     <Fragment>
       <div className={styles.box}>
@@ -14,11 +18,8 @@ const FoodItem = (props) => {
             />
           </a>
         </div>
-        <FoodDesc desc={props.food} />
-        <div className={styles.desc}></div>
+        <FoodDesc desc={props.food} getId={getIdFood} />
       </div>
-  
-
     </Fragment>
   );
 };

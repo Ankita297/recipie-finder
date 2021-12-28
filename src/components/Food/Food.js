@@ -8,7 +8,7 @@ import Category from "../Category/Category";
 import Pagination from "../Paginate/Paginate";
 let dataRecipie = [];
 
-const Food = () => {
+const Food = (props) => {
   const [isInput, setIsInput] = useState("");
   const [recipies, setRecipie] = useState([]);
   const [category, setCategory] = useState();
