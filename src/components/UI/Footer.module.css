@@ -1,0 +1,35 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Lobster&family=Lora:wght@500&family=Yuji+Syuku&display=swap");
+
+
+.foo{
+    margin-bottom: 0px;
+    position: sticky;
+    bottom: 0px;
+
+
+}
+
+.footer{
+    background-color: #1f2831;
+    text-align: center;
+    font-family: "Dancing Script", cursive;
+   width: 100%;
+   margin-top: -50px;
+
+}
+.footer p{
+    color: #66fcf1;
+    padding-bottom: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 2rem;
+    margin-bottom: 0px;
+
+
+}
+
+.footer p a{
+    text-decoration: none;
+  color: #66fcf1;
+}

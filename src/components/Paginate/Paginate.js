@@ -4,7 +4,6 @@ function Pagination({ data, getId, RenderComponent, pageLimit, dataLimit }) {
   const max_page = data.length / dataLimit;
   const [pages] = useState(Math.round(data.length / dataLimit));
 
-
   const [currentPage, setCurrentPage] = useState(1);
 
   function goToNextPage() {
@@ -41,7 +40,6 @@ function Pagination({ data, getId, RenderComponent, pageLimit, dataLimit }) {
       <div className="dataContainer">
         <div className="box">
           <div className="content">
-            
             {getPaginatedData().map((d, idx) => (
               <RenderComponent key={idx} food={d} />
             ))}

@@ -1,29 +1,27 @@
-import React,{useContext} from 'react'
+import React, { useContext } from "react";
 
-import FavContext from '../../store/context'
-import Food from '../Food/Food'
-import FoodItem from '../Food/FoodItem'
+import FavContext from "../../store/context";
+import FoodItem from "../Food/FoodItem";
+import styles from "./Fav.module.css";
 
 const Fav = () => {
+  const fav = useContext(FavContext);
 
-    const fav=useContext(FavContext)
-
-    return (
-        <div>
-
-            {fav.recipies!=null&& 
-            fav.recipies.map(x=>{
-
-                return<div> <h1 key={x.idMeal}>{x.strMeal}</h1>
-                <FoodItem  food={x}/>
- </div>
-            })
-}
-
-
-
+  return (
+    <div>
+      <h1 className={styles.heading}>My favourite recipies</h1>
+      <div className={styles.pagination}>
+        <div className={styles.box}>
+          <div className={styles.content}>
+            {fav.recipies != null &&
+              fav.recipies.map((x) => {
+                return <FoodItem food={x} key={x.idMeal} />;
+              })}
+          </div>
         </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
 
-export default Fav
+export default Fav;

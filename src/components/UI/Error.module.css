@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lora:wght@500&family=Yuji+Syuku&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Lora:wght@500&family=Yuji+Syuku&display=swap");
 
-.box{
-    text-align: center;
+.box {
+  text-align: center;
+  min-height: 45vh;
 }
 
-.heading{
-    font-family:Georgia, 'Times New Roman', Times, serif
-
+.heading {
+  font-family: Georgia, "Times New Roman", Times, serif;
 }

@@ -10,7 +10,7 @@ export const FoodDesc = (props) => {
     props.getId(props.desc.idMeal);
   };
 
-  const found = ctx.recipies.find((x) => x.idMeal == props.desc.idMeal);
+  const found = ctx.recipies.find((x) => x.idMeal === props.desc.idMeal);
 
   return (
     <div className={styles.center}>
@@ -30,16 +30,16 @@ export const FoodDesc = (props) => {
         </a>
         <br />
 
-        {found != undefined ? (
+        {found !== undefined ? (
           <button
             id={props.desc.idMeal}
             target="_b"
             type="button"
-            style={{ backgroundColor: "pink" }}
+            style={{ backgroundColor: "crimson" }}
             onClick={idHandler}
             className={styles.btn}
           >
-            <BiBookHeart style={{ color: "red" }} />
+            <BiBookHeart style={{ color: "white" }} />
           </button>
         ) : (
           <button
@@ -47,13 +47,12 @@ export const FoodDesc = (props) => {
             target="_b"
             type="button"
             onClick={idHandler}
-            style={{ backgroundColor: "white" }}
+            style={{ backgroundColor: "#DADDFC" }}
             className={styles.btn}
           >
-            <BiBookHeart style={{ color: "orange" }} />
+            <BiBookHeart style={{ color: "#1f2831", fontWeight: "550" }} />
           </button>
         )}
-
       </div>
     </div>
   );

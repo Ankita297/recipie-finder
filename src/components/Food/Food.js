@@ -16,11 +16,6 @@ const Food = (props) => {
 
   const InputRef = useRef("");
 
-   const getFoodId=(data)=>{
-     console.log(data);
-     props.getId(data);
-   }
-
   const { error, sendRequest: loadData } = useHttp();
 
   useEffect(() => {

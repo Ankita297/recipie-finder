@@ -1,12 +1,12 @@
-import Header from "../components/Header/Header"
-import Food from "../components/Food/Food"
-const Homepage=()=>{
-return <div>
-          <Header />
+import Header from "../components/Header/Header";
+import Food from "../components/Food/Food";
+const Homepage = () => {
+  return (
+    <div>
+      <Header />
       <Food />
+    </div>
+  );
+};
 
-</div>
-}
-
-
-export default Homepage
+export default Homepage;

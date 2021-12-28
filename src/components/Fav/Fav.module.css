@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Lobster&family=Lora:wght@500&family=Yuji+Syuku&display=swap");
+
+.pagination {
+  margin: 4% 15%;
+}
+
+.heading {
+  color: #1f2831;
+  font-size: 3rem;
+  font-weight: 550;
+  letter-spacing: 2px;
+  font-family: "Dancing Script", cursive;
+}
+
+.box {
+  margin-top: 2%;
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f2833;
+  border-radius: 5px;
+  margin-bottom: 5rem;
+}
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 20px;
+}
+
+@media screen and (max-width: 998px) {
+  .content {
+    grid-template-columns: 1fr 1fr;
+    padding: 12px;
+  }
+  .box {
+    margin-bottom: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
