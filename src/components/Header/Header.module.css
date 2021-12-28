@@ -1,36 +1,38 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display+SC");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Lobster&family=Lora:wght@500&family=Yuji+Syuku&display=swap");
 
 .header {
-  background: white;
-  color: rgb(13, 26, 38);
-  width: 100vw;
-  margin-bottom: 60px;
-
-
+  color: #66fcf1;
+  width: 100%;
   top: 0;
-  height: 60px;
-  line-height: 60px;
+  height: 65px;
+  line-height: 70px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-
-}
-.header h1 {
-  font: normal 2.25em "Playfair Display SC", serif;
-  text-align: center;
+  background-color: #1f2833;
 }
 
-.fav
-{
+.link {
+  text-decoration: none;
+  font-family: "Dancing Script", cursive;
+  letter-spacing: 2px;
+  color: #66fcf1;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.fav {
   float: right;
   margin-right: 2rem;
 }
-
-.navbar {
-  background: white;
-  color: rgb(13, 26, 38);
-  position: fixed;
-  top: 0;
-  height: 60px;
-  line-height: 60px;
-  width: 100vw;
-  z-index: 10;
+.favIcon {
+  color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  border-radius: 50%;
+  background-color: #66fcf1;
+  margin-top: 10px;
+  font-size: 40px;
+}
+.foodIcon {
+  color: #fff;
+  margin-left: 2%;
 }

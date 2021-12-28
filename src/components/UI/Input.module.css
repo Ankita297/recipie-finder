@@ -8,13 +8,17 @@
   box-sizing: border-box;
   transition: 0.3s;
   display: inline-block;
-  border-color: dodgerBlue;
+  border-color: #1f2823;
+}
 
+::placeholder {
+  color: #1f2823;
+  font-weight: 525;
 }
 
 .input:focus {
-  border-color: dodgerBlue;
-  box-shadow: 0 0 8px 0 dodgerBlue;
+  border-color: #1f2823;
+  box-shadow: 0 0 8px 0 #66fcf1;
 }
 
 .box {

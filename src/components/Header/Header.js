@@ -1,19 +1,18 @@
 import React from "react";
 import styles from "./Header.module.css";
 import { Link } from "react-router-dom";
-
-import logo from "../../logo.svg"
+import { AiTwotoneHeart } from "react-icons/ai";
+import { MdFastfood } from "react-icons/md";
 const Header = () => {
   return (
-      <header className={styles.header}>
-        <Link to="/" > <img src={logo} alt="logo"/> RECIPIE FINDER</Link>
-        <Link to= "/fav" className={styles.fav}> Fav paage</Link>
-        
-      </header>
-
-
-
-      
+    <header className={styles.header}>
+      <Link to="/" className={styles.link}>
+        <MdFastfood className={styles.foodIcon} /> Recipie finder
+      </Link>
+      <Link to="/fav" className={styles.fav}>
+        <AiTwotoneHeart className={styles.favIcon} />
+      </Link>
+    </header>
   );
 };
 

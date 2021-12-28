@@ -1,13 +1,4 @@
-.button {
-  text-shadow: 0px -1px 0px #168be1;
-  color: #ffffff;
-  margin: 0% 2% 2% 2%;
-  font-size: 15px;
-  background-color: #34a9ff;
-  border-color: #34a9ff #168be1 #168be1 #34a9ff;
-  border-color: rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.35) rgba(0, 0, 0, 0.35)
-    rgba(0, 0, 0, 0.25);
-}
+
 
 .expenses_filter {
   padding: 0 1rem;
